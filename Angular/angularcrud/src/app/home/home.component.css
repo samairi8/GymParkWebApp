@@ -1,0 +1,65 @@
+.page {
+    color: rgb(11, 10, 10);
+    padding: 0 1rem;
+    background: #f1f5f9;
+    position: absolute;
+    text-align:center;
+    text-size-adjust:140px;
+    &__box {
+      min-height: 120px;
+      background: #1e293b;
+      margin: 0 -1rem;
+      font-size: 36px;
+    }
+    &__content {
+      min-height: calc(100vh - 178px);
+      border-radius: 10px;
+      margin-top: -2rem;
+      background: white;
+      color: black;
+      font-size: 2rem;
+      &-data {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    
+  }
+  .btn-update {
+    background-color: #28a745; /* Green color */
+    color: #ffffff; /* White text color */
+    border: none; /* Remove the border */
+  }
+  
+  .btn-update:hover {
+    background-color: #218838; /* Darker green color on hover */
+  }
+  
+  /* Style for the Delete button */
+  .btn-delete {
+    background-color: #dc3545; /* Red color */
+    color: #ffffff; /* White text color */
+    border: none; /* Remove the border */
+  }
+  
+  .btn-delete:hover {
+    background-color: #c82333; /* Darker red color on hover */
+  }
+  .card-header {
+    background-color: #007bff; /* Blue color */
+    color: #ffffff; /* White text color */
+  }
+
+  th {
+    background-color: #f8f9fa; /* Light gray color */
+    text-align: center; /* Center-align text */
+  }
+  
+  /* Style for the table data (membership details) */
+  td {
+    text-align: center; /* Center-align text */
+  }
+  
+  

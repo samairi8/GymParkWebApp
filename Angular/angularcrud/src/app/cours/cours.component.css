@@ -1,0 +1,92 @@
+/* Apply custom styles for the component */
+.container {
+    margin-top: 20px;
+  }
+  
+  h2 {
+    color: #202124;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  
+  .course-form {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .course-form label {
+    color: #202124;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .course-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  .course-form button {
+    margin-right: 10px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .course-form .btn-secondary {
+    background-color: #ccc;
+    color: #fff;
+  }
+  
+  .course-form .btn-secondary:hover {
+    background-color: #b2b2b2;
+  }
+  
+  .course-form .btn-primary {
+    background-color: #1a73e8;
+    color: #fff;
+  }
+  
+  .course-form .btn-primary:hover {
+    background-color: #1669c5;
+  }
+  
+  .table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+  }
+  
+  .table th,
+  .table td {
+    padding: 10px;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+    font-size: 16px;
+  }
+  
+  .table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+    font-weight: 500;
+  }
+  
+  .table tbody+tbody {
+    border-top: 2px solid #dee2e6;
+  }
+  
+  .btn-update {
+    background-color: #34a853;
+    color: #fff;
+  }
+  
+  .btn-delete {
+    background-color: #ea4335;
+    color: #fff;
+  }
+  

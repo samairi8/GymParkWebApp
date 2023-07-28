@@ -1,0 +1,26 @@
+<h2>Events</h2>
+
+<div class="event-list">
+    <div class="event" *ngFor="let event of events">
+      <!-- Event Header -->
+      <div class="event-header">
+        <h3>{{ event.title }}</h3>
+        <p class="event-date">{{ event.date | date }}</p>
+      </div>
+      <!-- Event Details -->
+      <p class="event-location"><strong>Location:</strong> {{ event.location }}</p>
+      <p class="event-description">{{ event.description }}</p>
+  
+      <!-- User Comments -->
+      <div class="user-comments">
+        <h4>Comments</h4>
+        <ul>
+          <li *ngFor="let comment of event.comments">{{ comment }}</li>
+        </ul>
+        <div class="comment-input">
+          <input type="text" [(ngModel)]="newComment" placeholder="Add a comment..." />
+          <button (click)="addComment(event)">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>

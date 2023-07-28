@@ -1,0 +1,68 @@
+.card-header {
+    background-color: #007bff; /* Blue color */
+    color: #ffffff; /* White text color */
+  }
+  
+  /* Style for the form input fields */
+  .form-control {
+    border: 1px solid #ced4da; /* Gray border */
+    border-radius: 4px; /* Rounded corners */
+  }
+  
+  /* Style for the "Create" button in the form */
+  .btn-primary {
+    background-color: #28a745; /* Green color */
+    color: #ffffff; /* White text color */
+    border: none; /* Remove the border */
+    border-radius: 4px; /* Rounded corners */
+  }
+  
+  .btn-primary:hover {
+    background-color: #218838; /* Darker green color on hover */
+  }
+  
+  /* Style for the table header */
+  th {
+    background-color: #f8f9fa; /* Light gray color */
+    text-align: center; /* Center-align text */
+  }
+  
+  /* Style for the table data (membership details) */
+  td {
+    text-align: center; /* Center-align text */
+  }
+  
+  /* Style for the "Edit" button in the table */
+  .btn-link {
+    color: #007bff; /* Blue color */
+    text-decoration: underline; /* Underline text */
+    cursor: pointer; /* Change cursor to hand pointer on hover */
+  }
+  
+  .btn-link:hover {
+    color: #0056b3; /* Darker blue color on hover */
+  }
+  
+  /* Style for the "Delete" button in the table */
+  /* Apply the same styles as the "Edit" button */
+  /* and add a red color for the text */
+  .btn-update {
+    background-color: #28a745; /* Green color */
+    color: #ffffff; /* White text color */
+    border: none; /* Remove the border */
+  }
+  
+  .btn-update:hover {
+    background-color: #218838; /* Darker green color on hover */
+  }
+  
+  /* Style for the Delete button */
+  .btn-delete {
+    background-color: #dc3545; /* Red color */
+    color: #ffffff; /* White text color */
+    border: none; /* Remove the border */
+  }
+  
+  .btn-delete:hover {
+    background-color: #c82333; /* Darker red color on hover */
+  }

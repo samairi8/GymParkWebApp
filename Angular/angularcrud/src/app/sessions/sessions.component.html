@@ -1,0 +1,115 @@
+<div class="container-fluid page">
+  <div class="d-flex page__box p-3 mt-2">Sessions</div>
+  <div class="page__content shadow p-3 position-relative">
+    <div class="page__content-data position-absolute text-center">
+      <!-- Create a new session form -->
+      <div class="card">
+        <div class="card-header">
+          Create Session
+        </div>
+        <div class="card-body">
+          <form #sessionForm="ngForm" (ngSubmit)="createSession(sessionForm)">
+            <div class="form-group">
+              <label for="nom">Name</label>
+              <input type="text" class="form-control" id="nom" name="nom" ngModel required>
+            </div>
+            <div class="form-group">
+              <label for="dateHeureDebut">Date Heure Debut</label>
+              <input type="datetime-local" class="form-control" id="dateHeureDebut" name="dateHeureDebut"
+                ngModel required>
+            </div>
+            <div class="form-group">
+              <label for="dateHeureFin">Date Heure Fin</label>
+              <input type="datetime-local" class="form-control" id="dateHeureFin" name="dateHeureFin" ngModel
+                required>
+            </div>
+            <div class="form-group">
+              <label for="coachId">Select Coach</label>
+              <select class="form-control" id="coachId" name="coachId" ngModel required>
+                <option *ngFor="let coach of coaches" [value]="coach.id">{{ coach.nom }}</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="coursId">Select Course</label>
+              <select class="form-control" id="coursId" name="coursId" ngModel required>
+                <option *ngFor="let cours of courses" [value]="cours.id">{{ cours.nom }}</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Create Session</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Display existing sessions -->
+      <br>
+      <div class="card">
+        <div class="card-header">
+          Sessions List
+        </div>
+        <div class="card-body">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Nom</th>
+                <th>Date Heure Debut</th>
+                <th>Date Heure Fin</th>
+                <th>Cours</th>
+                <th>Coach</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let session of sessions">
+                <td>{{ session.nom }}</td>
+                <td>{{ session.dateHeureDebut | date: 'medium' }}</td>
+                <td>{{ session.dateHeureFin | date: 'medium' }}</td>
+                <td>{{ session.coach.nom }}</td>
+                <td>{{ session.cours.nom }}</td>
+                <td>
+                  <button class="btn btn-update" (click)="showUpdateForm(session)">Update</button>
+                  <button class="btn btn-delete" (click)="deleteSession(session.id)">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Form for updating the session -->
+      <div *ngIf="showUpdate">
+        <div class="card">
+          <div class="card-header">
+            Update Session
+          </div>
+          <div class="card-body">
+            <form [formGroup]="sessionFormGroup" (ngSubmit)="updateSession()">
+              <div class="form-group">
+                <label for="nom">Nom</label>
+                <input type="text" formControlName="nom" class="form-control" id="nom" />
+              </div>
+              <div class="form-group">
+                <label for="dateHeureDebut">Date Heure Debut</label>
+                <input type="text" formControlName="dateHeureDebut" class="form-control" id="dateHeureDebut" />
+              </div>
+              <div class="form-group">
+                <label for="dateHeureFin">Date Heure Fin</label>
+                <input type="text" formControlName="dateHeureFin" class="form-control" id="dateHeureFin" />
+              </div>
+              <div class="form-group">
+                <label for="coursId">Cours ID</label>
+                <input type="text" formControlName="coursId" class="form-control" id="coursId" />
+              </div>
+              <div class="form-group">
+                <label for="coachId">Coach ID</label>
+                <input type="text" formControlName="coachId" class="form-control" id="coachId" />
+              </div>
+
+              <button type="submit" class="btn btn-primary">Update</button>
+              <button type="button" class="btn btn-secondary" (click)="hideUpdateForm()">Cancel</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

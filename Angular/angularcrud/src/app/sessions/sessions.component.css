@@ -1,0 +1,42 @@
+.btn-sm {
+    font-size: 14px; /* Adjust the font size to your preference */
+    padding: 5px 10px; /* Adjust the padding to your preference */
+  }
+
+  .btn {
+    font-family: 'Roboto', sans-serif; /* Apply the Roboto font to buttons */
+    font-size: 16px; /* Set the font size for buttons */
+    /* Add any other custom styles for buttons if needed */
+  }
+  
+  .btn-update {
+    background-color: green;
+    color: white;
+  }
+  
+  .btn-delete {
+    background-color: red;
+    color: white;
+  }
+  .card-header {
+    background-color: #007bff; /* Blue color */
+    color: #ffffff; /* White text color */
+  }
+  
+  /* Style for the form input fields */
+  .form-control {
+    border: 1px solid #ced4da; /* Gray border */
+    border-radius: 4px; /* Rounded corners */
+  }
+
+    /* Style for the table header */
+    th {
+      background-color: #f8f9fa; /* Light gray color */
+      text-align: center; /* Center-align text */
+    }
+    
+    /* Style for the table data (membership details) */
+    td {
+      text-align: center; /* Center-align text */
+    }
+    

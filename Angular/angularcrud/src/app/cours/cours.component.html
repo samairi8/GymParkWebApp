@@ -1,0 +1,49 @@
+<h2>Cours</h2>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <!-- Create a new course -->
+      <div class="course-form">
+        <h2>Create Course</h2>
+        <form [formGroup]="courseForm" (ngSubmit)="onSubmit()">
+          <!-- Form fields -->
+          <div class="form-group">
+            <label for="nom">Name</label>
+            <input type="text" formControlName="nom" class="form-control" id="nom" />
+          </div>
+          <div class="form-group">
+            <label for="description">Description</label>
+            <input type="text" formControlName="description" class="form-control" id="description" />
+          </div>
+
+          <button type="submit" class="btn btn-primary">{{ isUpdateForm ? 'Update' : 'Create' }}</button>
+          <button type="button" class="btn btn-secondary" (click)="resetForm()">Cancel</button>
+        </form>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <!-- Display existing courses -->
+      <h3>Courses List</h3>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let course of courses">
+            <td>{{ course.nom }}</td>
+            <td>{{ course.description }}</td>
+            <td>
+              <button class="btn btn-update" (click)="showUpdateForm(course)">Update</button>
+              <button class="btn btn-delete" (click)="deleteCourse(course.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
